@@ -1,204 +1,431 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Aman Digital Services</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<title>Aman Digital Services</title>
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
 
-        header {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 45px 20px;
-        }
+body{
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.6;
+}
 
-        header h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
+header{
+    background:#111827;
+    color:white;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
 
-        nav {
-            background: #333;
-            text-align: center;
-            padding: 15px;
-        }
+.logo{
+    font-size:25px;
+    font-weight:bold;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-size:15px;
+}
 
-        section {
-            max-width: 900px;
-            margin: 25px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-        }
+nav a:hover{
+    color:#25D366;
+}
 
-        .services {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+.hero{
+    background:linear-gradient(135deg,#111827,#2563eb);
+    color:white;
+    text-align:center;
+    padding:90px 20px;
+}
 
-        .service {
-            flex: 1;
-            min-width: 220px;
-            background: #f1f1f1;
-            padding: 20px;
-            border-radius: 10px;
-        }
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
 
-        .buttons {
-            margin-top: 20px;
-        }
+.hero p{
+    font-size:20px;
+    margin-bottom:25px;
+}
 
-        .button {
-            display: inline-block;
-            padding: 13px 22px;
-            margin: 5px;
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-        }
+.btn{
+    display:inline-block;
+    padding:12px 22px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:5px;
+}
 
-        .whatsapp {
-            background: #25D366;
-        }
+.whatsapp{
+    background:#25D366;
+    color:white;
+}
 
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 30px;
-        }
+.call{
+    background:#2563eb;
+    color:white;
+}
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 30px;
-            }
+section{
+    padding:65px 8%;
+}
 
-            nav a {
-                display: inline-block;
-                margin: 8px;
-            }
-        }
-    </style>
+.title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.title h2{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.services{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:300px;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    transition:0.3s;
+}
+
+.icon{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.card h3{
+    font-size:23px;
+    margin-bottom:10px;
+}
+
+.card h2{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.about{
+    background:white;
+    text-align:center;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    font-size:17px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact-box{
+    background:white;
+    max-width:650px;
+    margin:auto;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.contact-box p{
+    margin:10px 0;
+    font-size:17px;
+}
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:700px){
+
+    header{
+        justify-content:center;
+        gap:15px;
+    }
+
+    nav{
+        text-align:center;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    section{
+        padding:50px 5%;
+    }
+
+    .card{
+        width:100%;
+        max-width:350px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header id="home">
-        <h1>Aman Digital Services</h1>
-        <p>Professional Website & Computer Services</p>
+<header>
 
-        <div class="buttons">
-            <a class="button whatsapp"
-               href="https://wa.me/919958281019"
-               target="_blank">
-                WhatsApp Us
-            </a>
-
-            <a class="button"
-               href="tel:+919958281019">
-                Call Now
-            </a>
-        </div>
-    </header>
+    <div class="logo">
+        Aman Digital Services
+    </div>
 
     <nav>
         <a href="#home">Home</a>
         <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <section id="services">
+</header>
+
+
+<section class="hero" id="home">
+
+    <h1>Build Your Professional Website</h1>
+
+    <p>
+        We create modern, mobile-friendly websites for businesses.
+    </p>
+
+    <a class="btn whatsapp"
+       href="https://wa.me/919958281019?text=Hello%20Aman%20Digital%20Services"
+       target="_blank">
+       WhatsApp Us
+    </a>
+
+    <a class="btn call"
+       href="tel:+919958281019">
+       Call Now
+    </a>
+
+</section>
+
+
+<section id="services">
+
+    <div class="title">
         <h2>Our Services</h2>
+        <p>Professional digital services for your business</p>
+    </div>
 
-        <div class="services">
+    <div class="services">
 
-            <div class="service">
-                <h3>Website Development</h3>
-                <p>
-                    Modern and responsive websites for
-                    businesses and shops.
-                </p>
-            </div>
-
-            <div class="service">
-                <h3>Computer Services</h3>
-                <p>
-                    Basic computer setup and technical
-                    support services.
-                </p>
-            </div>
-
-            <div class="service">
-                <h3>Digital Services</h3>
-                <p>
-                    Digital solutions to help businesses
-                    grow online.
-                </p>
-            </div>
-
+        <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Website Design</h3>
+            <p>
+                Modern and professional websites for businesses,
+                shops and personal brands.
+            </p>
         </div>
-    </section>
 
-    <section id="about">
-        <h2>About Us</h2>
+        <div class="card">
+            <div class="icon">📱</div>
+            <h3>Mobile Friendly</h3>
+            <p>
+                Websites that work smoothly on mobile phones,
+                tablets and computers.
+            </p>
+        </div>
 
-        <p>
-            Aman Digital Services provides website and
-            computer-related services for small businesses.
-        </p>
+        <div class="card">
+            <div class="icon">💬</div>
+            <h3>WhatsApp Integration</h3>
+            <p>
+                Direct WhatsApp and call buttons so customers
+                can contact your business easily.
+            </p>
+        </div>
 
-        <p>
-            Our goal is to help businesses create a
-            professional online presence.
-        </p>
-    </section>
+    </div>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
+</section>
 
-        <p><strong>Phone:</strong> 9958281019</p>
-        <p><strong>Email:</strong> aman995828@gmail.com</p>
 
-        <div class="buttons">
+<section id="pricing">
 
-            <a class="button whatsapp"
-               href="https://wa.me/919958281019"
+    <div class="title">
+        <h2>Our Packages</h2>
+        <p>Choose the package that suits your business</p>
+    </div>
+
+    <div class="services">
+
+        <div class="card">
+
+            <div class="icon">🌱</div>
+
+            <h3>Basic Website</h3>
+
+            <h2>₹2,999</h2>
+
+            <p>✓ 3-4 Pages</p>
+            <p>✓ Mobile Friendly</p>
+            <p>✓ WhatsApp Button</p>
+            <p>✓ Contact Details</p>
+
+            <a class="btn whatsapp"
+               href="https://wa.me/919958281019?text=I%20want%20the%20Basic%20Website%20package"
                target="_blank">
-                Chat on WhatsApp
-            </a>
-
-            <a class="button"
-               href="tel:+919958281019">
-                Call Us
+                Enquire Now
             </a>
 
         </div>
-    </section>
 
-    <footer>
-        <p>© 2026 Aman Digital Services</p>
-        <p>All Rights Reserved.</p>
-    </footer>
+
+        <div class="card">
+
+            <div class="icon">🚀</div>
+
+            <h3>Business Website</h3>
+
+            <h2>₹5,999</h2>
+
+            <p>✓ 5-7 Pages</p>
+            <p>✓ Professional Design</p>
+            <p>✓ WhatsApp & Call</p>
+            <p>✓ Contact Section</p>
+
+            <a class="btn whatsapp"
+               href="https://wa.me/919958281019?text=I%20want%20the%20Business%20Website%20package"
+               target="_blank">
+                Enquire Now
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">💎</div>
+
+            <h3>Premium Website</h3>
+
+            <h2>₹9,999</h2>
+
+            <p>✓ Professional Design</p>
+            <p>✓ Multiple Pages</p>
+            <p>✓ Mobile Friendly</p>
+            <p>✓ Custom Features</p>
+
+            <a class="btn whatsapp"
+               href="https://wa.me/919958281019?text=I%20want%20the%20Premium%20Website%20package"
+               target="_blank">
+                Enquire Now
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="about" id="about">
+
+    <div class="title">
+        <h2>About Us</h2>
+    </div>
+
+    <p>
+        Aman Digital Services provides modern and professional
+        website solutions for small businesses, shops,
+        startups and personal brands.
+    </p>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+    <div class="title">
+        <h2>Contact Us</h2>
+        <p>Let's build your website together</p>
+    </div>
+
+    <div class="contact-box">
+
+        <p>
+            📱 <strong>Phone:</strong> 9958281019
+        </p>
+
+        <p>
+            💬 <strong>WhatsApp:</strong> 9958281019
+        </p>
+
+        <p>
+            📧 <strong>Email:</strong> aman995828@gmail.com
+        </p>
+
+        <br>
+
+        <a class="btn whatsapp"
+           href="https://wa.me/919958281019?text=Hello%20I%20want%20a%20website"
+           target="_blank">
+           Chat on WhatsApp
+        </a>
+
+        <a class="btn call"
+           href="tel:+919958281019">
+           Call Us
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Aman Digital Services. All Rights Reserved.
+    </p>
+
+</footer>
 
 </body>
 </html>
